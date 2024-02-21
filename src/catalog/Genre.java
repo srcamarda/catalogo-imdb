@@ -1,4 +1,14 @@
 package catalog;
 
-public class Genre {
+public enum Genre {
+    ACAO,
+    COMEDIA,
+    DRAMA,
+    TERROR,
+    ROMANCE,
+    FICCAO,
+    FANTASIA,
+    AVENTURA,
+    MUSICAL,
+    DOCUMENTARIO
 }

@@ -41,7 +41,7 @@ public class Main {
                         subMenuOption = input.nextInt();
                         input.nextLine();
 
-                        if (subMenuOption < 1 || subMenuOption > 6) {
+                        if (subMenuOption < 1 || subMenuOption > 5) {
                             System.out.print("\nOpção inválida selecionada! Enter para continuar...");
                             input.nextLine();
                             continue;
@@ -57,15 +57,12 @@ public class Main {
                             case 3: //Add director
                                 //addDirector();
                                 break;
-                            case 4: //Add genre
-                                //addGenre();
-                                break;
-                            case 5: //Add associations
+                            case 4: //Add associations
                                 //addAssociation();
                                 break;
                         }
 
-                    } while (subMenuOption != 6);
+                    } while (subMenuOption != 5);
                     break;
 
                 case 4: //Exit

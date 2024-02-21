@@ -1,4 +1,15 @@
 package catalog;
 
-public class Director {
+public class Director extends Person{
+    final private String area;
+
+    public Director(String nome, String cpf, Area area) {
+        super(nome, cpf);
+        this.area = area.toString().toLowerCase();
+    }
+
+    @Override
+    public String toString() {
+        return "\"Diretor de "+ area +": "+ super.toString()+"\"";
+    }
 }

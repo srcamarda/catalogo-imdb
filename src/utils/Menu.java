@@ -25,9 +25,8 @@ public class Menu {
                 1 - Cadastrar filme
                 2 - Cadastrar ator
                 3 - Cadastrar diretor
-                4 - Cadastrar gênero
-                5 - Adicionar associações
-                6 - Voltar
+                4 - Adicionar associações
+                5 - Voltar
                 """;
 
         System.out.println(menuStr);
