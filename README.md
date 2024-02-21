@@ -1,6 +1,6 @@
 # Catálogo IMDB :ledger::movie_camera:
 
-Este projeto visa criar um catálogo de filmes simples no estilo IMDB. Ele permite que você cadastre filmes, atores, diretores e associe um filme com seus atores e diretores. Você também pode pesquisar filmes por name.
+Este projeto visa criar um catálogo de filmes simples no estilo IMDB. Ele permite que você cadastre filmes, atores, diretores e associe um filme com seus atores e diretores. Você também pode pesquisar filmes por nome.
 
 ## Funcionalidades
 
