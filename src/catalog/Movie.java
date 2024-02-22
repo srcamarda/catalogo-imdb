@@ -1,6 +1,6 @@
 package catalog;
 
-import java.util.ArrayList;
+import java.util.HashSet;
 
 public class Movie {
     final private String movieName;
@@ -8,8 +8,8 @@ public class Movie {
     final private double budget;
     final private String description;
     final private String genre;
-    private ArrayList<Actor> movieActors = new ArrayList<>();
-    private ArrayList<Director> movieDirectors = new ArrayList<>();
+    private HashSet<Actor> movieActors = new HashSet<>();
+    private HashSet<Director> movieDirectors = new HashSet<>();
 
     public Movie(String nomeDoFilme, String releaseDate, double budget, String description, Genre genre) {
         this.movieName = nomeDoFilme;
