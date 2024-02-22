@@ -5,7 +5,9 @@ public class Validator {
         return cpf.length() == 4 && cpf.matches("\\d+");
     }
 
-    public static boolean budgetValidator(int budget) { return budget >= 0; }
+    public static boolean budgetValidator(int budget) {
+        return budget >= 0;
+    }
 
     public static boolean nullOrEmpty(String... dataParams) {
         for (String data : dataParams) {

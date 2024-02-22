@@ -1,8 +1,18 @@
 package catalog;
 
 public enum Area {
-    DIRETOR,
-    FOTOGRAFIA,
-    FILMAGEM,
-    PRODUCAO
+    ARTE("Arte"),
+    FOTOGRAFIA("Fotografia"),
+    FILMAGEM("Filmagem"),
+    PRODUCAO("Produção");
+
+    private String directorArea;
+
+    Area(String directorArea) {
+        this.directorArea = directorArea;
+    }
+
+    public String getDirectorArea() {
+        return directorArea;
+    }
 }

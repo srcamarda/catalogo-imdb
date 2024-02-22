@@ -16,7 +16,7 @@ public class Movie {
         this.releaseDate = releaseDate;
         this.budget = budget;
         this.description = description;
-        this.genre = genre.toString().toLowerCase();
+        this.genre = genre.getGenreName();
     }
 
     public String getMovieName() {
@@ -24,13 +24,24 @@ public class Movie {
     }
 
     public String addPersonToMovie(Person person) {
-        if (person instanceof Actor)
+        String personType = "";
+        if (person instanceof Actor) {
+            if (movieActors.contains((Actor) person)) {
+                return "O ator já está associado ao filme";
+            }
+            personType = "ator";
             movieActors.add((Actor) person);
+        }
 
-        if (person instanceof Director)
+        if (person instanceof Director) {
+            if (movieDirectors.contains((Director) person)) {
+                return "O diretor já está associado ao filme";
+            }
+            personType = "diretor";
             movieDirectors.add((Director) person);
+        }
 
-        return "\"" + person.getName() + "\" adicionado ao filme \""+ this.getMovieName() +"\" com sucesso.";
+        return "O " + personType + " \"" + person.getName() + "\" foi adicionado ao filme \"" + this.getMovieName() + "\" com sucesso.";
     }
 
     @Override

@@ -18,8 +18,7 @@ public class ActorController {
             return "CPF já está cadastrado no sistema";
         }
         registeredActors.add(newActor);
-        return "Ator cadastrado com sucesso";
-
+        return "Ator cadastrado com sucesso!";
     }
 
     public Actor searchActor(String actorCpf) {

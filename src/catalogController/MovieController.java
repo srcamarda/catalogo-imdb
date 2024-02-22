@@ -11,7 +11,7 @@ public class MovieController {
 
     public String registerMovie(String movieName, String releaseDate, int movieBudget, String movieDescription, Genre movieGenre) {
         if (Validator.nullOrEmpty(movieName, releaseDate, String.valueOf(movieBudget), movieDescription)) {
-            return "Não foi possível concluir o cadastro do filme. Verifique as entradas e tente novamenter.";
+            return "Não foi possível concluir o cadastro do filme. Verifique as entradas e tente novamente.";
         }
 
         if (!Validator.budgetValidator(movieBudget)) {
@@ -22,14 +22,13 @@ public class MovieController {
             return "Filme já está cadastrado no sistema";
         }
 
-        Movie newMovie = new Movie(movieName,releaseDate,movieBudget,movieDescription, movieGenre);
+        Movie newMovie = new Movie(movieName, releaseDate, movieBudget, movieDescription, movieGenre);
         registeredMovies.add(newMovie);
-        return "Filme cadastrado com sucesso";
-
+        return "Filme cadastrado com sucesso!";
     }
 
     public Movie searchMovie(String movieNameToFind) {
-        for (Movie movie: registeredMovies) {
+        for (Movie movie : registeredMovies) {
             String movieName = movie.getMovieName();
             if (movieName.equalsIgnoreCase(movieNameToFind)) {
                 return movie;
@@ -38,16 +37,20 @@ public class MovieController {
         return null;
     }
 
-    public StringBuilder getRegisteredMovies() {
+    public String getRegisteredMovies() {
         int counter = 0;
+
+        if (registeredMovies.isEmpty())
+            return "Nenhum filme cadastrado!";
+
         StringBuilder registeredMoviesStr = new StringBuilder("[");
-        for (Movie movie: registeredMovies) {
+        for (Movie movie : registeredMovies) {
             registeredMoviesStr.append(movie.getMovieName());
             if (++counter < registeredMovies.size()) {
                 registeredMoviesStr.append(",");
             }
         }
         registeredMoviesStr.append("]");
-        return registeredMoviesStr;
+        return registeredMoviesStr.toString();
     }
 }
