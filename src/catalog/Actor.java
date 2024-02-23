@@ -1,28 +1,13 @@
-package catalogo;
+package catalog;
 
-public class Ator extends Pessoa {
-
-    private String nomeArtistico;
-
-    public Ator(String nome, String cpf, String nomeArtistico) {
-        super(nome, cpf);
-        this.nomeArtistico = nomeArtistico;
+public class Actor extends Person {
+    private String stageName;
+    public Actor(String name, String cpf, String stageName) {
+        super(name, cpf);
+        this.stageName = stageName;
     }
 
-    public String getNomeArtistico() {
-        return nomeArtistico;
-    }
-
-    public void setNomeArtistico(String nomeArtistico) {
-        this.nomeArtistico = nomeArtistico;
-    }
-
-    @Override
-    public String toString() {
-        return "Ator{" +
-                "nome='" + nome + '\'' +
-                ", cpf='" + cpf + '\'' +
-                ", nomeArtistico='" + nomeArtistico + '\'' +
-                '}';
+    public void setStageName(String stageName) {
+        this.stageName = stageName;
     }
 }

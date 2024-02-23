@@ -9,11 +9,11 @@ import java.util.Iterator;
 public class ActorController {
     private HashSet<Actor> registeredActors = new HashSet<>();
 
-    public String registerActor(String actorName, String actorCpf) {
+    public String registerActor(String actorName, String actorCpf, String actorStageName) {
         if (Validator.nullOrEmpty(actorName, actorCpf) || !Validator.fakeCpfValidator(actorCpf)) {
             return "Não foi possível realizar o cadastro do ator, verifique as informações e tente novamente.";
         }
-        Actor newActor = new Actor(actorName, actorCpf);
+        Actor newActor = new Actor(actorName, actorCpf, actorStageName);
         if (registeredActors.contains(newActor)) {
             return "CPF já está cadastrado no sistema";
         }
